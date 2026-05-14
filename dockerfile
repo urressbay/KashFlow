@@ -1,3 +1,5 @@
+RUN apk add --no-cache mariadb-dev pkgconfig gcc musl-dev
+
 FROM nginx:latest
 
 COPY nginx.conf /etc/nginx/nginx.conf
