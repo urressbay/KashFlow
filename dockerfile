@@ -1,3 +1,10 @@
+FROM nginx:latest
+
+COPY nginx.conf /etc/nginx/nginx.conf
+
+CMD ["nginx", "-g", "daemon off;"]
+
+
 FROM python:3-alpine
 
 WORKDIR /app
