@@ -2,7 +2,7 @@ version: '3'
 
 services:
   app:
-    build: ./kashflow
+    build: .
     environment:
       - DATABASE_URL=mysql://user:password@db/kashflow
     depends_on:
