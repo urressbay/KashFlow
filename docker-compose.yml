@@ -17,9 +17,16 @@ services:
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
 
-  nginx:
-    image: nginx:latest
+  web:
+    build: static/
     ports:
       - "80:80"
     depends_on:
       - app
+
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - web
