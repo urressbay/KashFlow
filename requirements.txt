@@ -1,4 +1,4 @@
-pkgconfig
+pkg-config
 Flask==2.0.1
 SQLAlchemy==1.4.26
 mysqlclient
